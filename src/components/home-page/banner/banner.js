@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import SplitText from "gsap/SplitText";
 import Img from "gatsby-image";
 import Arrow from "../../../images/arrow-down.svg"
+import Video from '../banner/video/video'
 
 import "./banner.scss"
 
@@ -42,6 +43,7 @@ export default () => {
             <span>We love experiences.</span>
             <span>We create them.</span>
           </h1>
+          <Video />
           {
             bannerImage.errors
               ? null
