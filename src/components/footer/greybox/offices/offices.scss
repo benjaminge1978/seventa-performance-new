@@ -1,0 +1,43 @@
+.offices-row {
+    display: flex;
+
+    .offices-row__item {
+        border-top: 1px solid #fff;
+        margin-right: 70px;
+        padding-top: 25px;
+        width: 20%;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        h4 {
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: .9em;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .offices-row {
+
+        .offices-row__item {
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .offices-row {
+        flex-direction: column;
+
+        .offices-row__item {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+}

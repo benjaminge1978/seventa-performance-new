@@ -1,0 +1,122 @@
+.footer-greybox {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+
+    .container-labelled__label {
+        flex-basis: 175px;
+        position: relative;
+
+        .greybox-lets-talk {
+            color: #000;
+            font-size: 0.9rem;
+            position: absolute;
+            top: 0;
+            left: 25%;
+            transform: rotate(90deg) translateX(36%);
+            white-space: nowrap;
+            &::after {
+                background-color: #000;
+                content: "";
+                display: inline-block;
+                height: 1px;
+                position: relative;
+                left: 5px;
+                vertical-align: middle;
+                width: 50px;
+            }
+        }
+
+        .site-brand {
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+            transform: rotate(-90deg) translate(35%, -50%);
+            color: #fff;
+
+            svg .st0 {
+                fill: #fff;
+            }
+        }
+    }
+
+    .container-labelled__inner {
+        flex-grow: 2;
+        background-color: #717171;
+        padding: 75px 100px;
+
+        h3 {
+            font-weight: 400;
+            font-size: 2em;
+        }
+
+        .lets-chat-desc {
+            max-width: 690px;
+        }
+
+        .greybox-contact {
+            position: relative;
+            padding: 2em 0;
+
+            a {
+                color: #fff;
+            }
+
+            p {
+                margin-bottom: .9rem;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1px;
+                background-color: #fff;
+                width: 50px;
+            }
+        }
+
+        .brand-mobile {
+            display: none; 
+            
+            svg {
+                max-width: 150px;
+                margin-bottom: 2rem;
+
+                .st0 {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .footer-greybox {
+
+        .container-labelled__label {
+            display: none;
+        }
+
+        .container-labelled__inner {
+
+            .brand-mobile {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-greybox {
+
+        .container-labelled__inner {
+            padding: 65px 50px;
+        }
+    }
+}
+

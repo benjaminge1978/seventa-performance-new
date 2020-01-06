@@ -1,0 +1,115 @@
+footer.site-footer {
+    font-size: 0.8rem;
+
+    ul#footer-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    
+        li {
+            display: inline-block;
+            padding-right: 2rem;
+    
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .footer-summary {
+        color: #9a9a9a;
+        display: flex;
+        justify-content: space-between;
+        background-color: #313131;
+        padding: 260px 75px 50px 175px;
+        margin-top: -200px;
+
+        a {
+            color: #9a9a9a
+        }
+
+        .site-by-link {
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        .social-links {
+            display: flex;
+        }
+        
+    }
+}
+
+span.social-links__text{
+    &::after {
+        background-color: #9a9a9a;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        left: 5px;
+        vertical-align: middle;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    footer.site-footer {
+
+        .footer-summary {
+            flex-direction: column-reverse;
+            
+            ul#footer-menu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                margin-top: 3rem;
+            
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    footer.site-footer {
+
+        .footer-greybox {
+
+            .footer-greybox__left {
+                display: none;
+            }
+        }
+
+        .footer-summary {
+            padding: 35px 50px;
+            margin-top: 0;
+
+            .site-by-link {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer.site-footer {
+
+        .footer-greybox {
+
+            .footer-greybox__inner {
+                padding: 65px 50px;
+            }
+        }
+
+        .footer-summary {
+
+            .site-by-link {
+                display: none;
+            }
+        }
+    }
+}

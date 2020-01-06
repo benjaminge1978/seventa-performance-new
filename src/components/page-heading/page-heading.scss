@@ -1,0 +1,66 @@
+.page-heading {
+  padding: 115px 375px;
+
+  &__name {
+    color: #9a9a9a;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    max-width:900px;
+  }
+
+  &__description {
+    max-width: 850px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .page-heading {
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .page-heading {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .page-heading {
+    padding-right: 150px;
+    padding-left: 150px;
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .page-heading {
+    padding-right: 75px;
+    padding-left: 75px;
+
+    &__title {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@media all and (max-width: 576px) {
+  .page-heading {
+    padding-right: 50px;
+    padding-left: 50px;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}

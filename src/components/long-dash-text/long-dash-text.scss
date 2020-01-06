@@ -1,0 +1,23 @@
+.long-dash-text {
+  display: flex;
+
+  &__content {
+    margin-left: 2rem;
+    max-width: 700px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .long-dash-text {
+    flex-direction: column;
+
+    &__dash {
+      margin-bottom: 2rem;
+    }
+
+    &__content {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+}

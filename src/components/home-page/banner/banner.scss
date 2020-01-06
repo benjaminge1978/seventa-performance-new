@@ -1,0 +1,115 @@
+.banner-section {
+    display: flex;
+    height: calc(100vh - 124px);
+    min-height: 750px;
+    background: linear-gradient(to top, #EFEFEF 0%, #EFEFEF 250px, white 250px);
+
+    &__left {
+        position: relative;
+        width: 175px;
+        min-width: 175px;
+
+        svg {
+            position: absolute;
+            width: auto;
+            height: 50px;
+            display: block;
+            bottom: 95px;
+            left: 45%;
+        }
+    }
+
+    &__inner {
+        flex-grow: 1;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100vh - 118px);
+        overflow: hidden;
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            color: #fff;
+            font-size: 4rem;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-weight: bold;
+
+            span {
+                display: block;
+                white-space: nowrap;
+            }
+        }
+
+        .gatsby-image-wrapper {
+            height: 100%;
+        }
+    }
+
+    &__video {
+        height: 100%;
+
+        iframe {
+            margin: 0;
+            padding: 0;
+            border-width: 0;
+            outline-width: 0;
+        }
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .banner-section {
+        min-height: 0px;
+
+        &__left {
+            width: 100px;
+            min-width: 100px;
+
+        }
+
+        &__inner {
+
+            .banner-text {
+                font-size: 65px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .banner-section {
+
+        &__left {
+            width: 0;
+            min-width: 0;
+
+        }
+
+        &__inner {
+
+            .banner-text {
+                font-size: 60px;
+
+                span {
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    .banner-section {
+
+        &__inner {
+
+            .banner-text {
+                font-size: 40px;
+            }
+        }
+    }
+}

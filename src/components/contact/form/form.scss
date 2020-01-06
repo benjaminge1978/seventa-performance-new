@@ -1,0 +1,66 @@
+form#contact-form {
+  max-width: 650px;
+
+  label {
+    display: block;
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  input, textarea {
+    font-size: 1.3rem;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  input {
+    border: 1px solid transparent;
+    border-bottom-color: #313131;
+    padding: 10px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-ms-input-placeholder, &:-ms-input-placeholder, &::placeholder {
+      color: #313131;
+      opacity: 1;
+    }
+
+    &[type="text"] {
+
+    }
+
+    &[type="email"] {
+
+    }
+  }
+
+  textarea {
+    margin-top: 2rem;
+    border: 1px solid #313131;
+    padding: 15px;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    svg {
+      display: inline-block;
+      width: 50px;
+      margin-left: 10px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

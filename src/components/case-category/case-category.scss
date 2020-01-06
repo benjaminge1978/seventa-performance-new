@@ -1,0 +1,52 @@
+.case-category {
+  
+  header.site-header {
+    background-color: #efefef;
+  }
+  
+  .page-heading {
+    background-color: #efefef;
+  }
+
+  .page-heading__description p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .container-labelled__label {
+
+    svg {
+      display: block;
+      width: 15px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+  }
+
+  .category-page-cases {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+
+    .gatsby-image-wrapper {
+      padding-top: 100%;
+    }
+  }
+
+  .category-page-cases--wrapper {
+    background: linear-gradient( to bottom, #efefef 0%, #efefef 30%, white 30%);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .case-category {
+
+    .page-heading {
+      padding-top: 75px;
+    }
+
+    .category-page-cases {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.cases-section {
+    display: flex;
+    margin-bottom: 110px;
+    background: linear-gradient(to bottom, #EFEFEF 0%, #EFEFEF 10%, white 10%);
+
+    .section-label {
+        display: block;
+        transform: rotate(90deg) translate(73px, -5px);
+    }
+
+    .cases-list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media all and (max-width: 992px) {
+    .cases-section {
+
+        .container-labelled__inner {
+            padding: 50px;
+
+            .cases-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

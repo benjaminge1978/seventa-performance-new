@@ -1,0 +1,133 @@
+.case-studies {
+
+  &-heading-links {
+    list-style-type: none;
+    margin: 35px 0 0 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 50px 0 0;
+
+      a {
+        display: block;
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-section {
+    background: linear-gradient(to bottom, white 0%, white 150px, #efefef 150px, #efefef 75%, white 75%, white 100%);
+
+    .container-labelled {
+
+      &__label {
+        width: 15px;
+        margin: 0% auto;
+      }
+
+      &__inner {
+        padding-right: 175px;
+
+        .case-studies-list {
+          display: flex;
+          flex-wrap: wrap;
+
+          .case-studies-category {
+            width: 49%;
+            margin-right: 2%;
+            margin-bottom: 4rem;
+            color: inherit;
+
+            .case-studies-list-item {
+
+              &__thumb {
+
+                .gatsby-image-wrapper {
+                  //padding-top: 70%;
+                  height: 515px;
+                  max-height: 515px;
+                  margin-bottom: 1rem;
+                }
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              &__title {
+                margin-bottom: .5rem;
+
+                a {
+                  color: inherit;
+                }
+              }
+
+              &__excerpt {
+                font-size: .9rem;
+              }
+
+              svg {
+                width: 50px;
+              }
+            }
+
+            &:nth-of-type(2n) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  .case-studies {
+
+    &-section {
+
+      .container-labelled {
+
+        &__inner {
+          padding-right: 50px;
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .case-studies {
+
+    &-page {
+
+      .page-heading {
+        padding-top: 60px;
+      }
+    }
+
+    &-section {
+
+      .container-labelled {
+
+        &__inner {
+
+          .case-studies-list {
+
+            .case-studies-category {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

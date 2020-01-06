@@ -1,0 +1,24 @@
+.container-labelled {
+  display: flex;
+
+  &__label {
+    width: 175px;
+  }
+
+  &__inner {
+    width: calc(100% - 175px);
+  }
+}
+
+@media all and (max-width: 992px) {
+  .container-labelled {
+
+    &__label {
+      display: none;
+    }
+
+    &__inner {
+      width: 100%;
+    }
+  }
+}

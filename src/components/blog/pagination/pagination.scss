@@ -1,0 +1,48 @@
+.pagination {
+  text-align: center;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+
+  &__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 10px;
+
+    svg {
+      color: #1A1A1A;
+      display: block;
+      width: 10px;
+    }
+
+    &:first-of-type {
+      margin-right: 10px;
+      line-height: 30px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: grey;
+    color: #fff;
+    font-size: 1.2rem;
+    
+    &--current {
+      background-color: #313131;
+    }
+  }
+}
