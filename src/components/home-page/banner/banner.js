@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import SplitText from "gsap/SplitText";
 import Img from "gatsby-image";
 import Arrow from "../../../images/arrow-down.svg"
-import Video from '../banner/video/video'
 
 import "./banner.scss"
 
@@ -13,19 +12,8 @@ export default () => {
         query BannerImage {
             file(relativePath: {eq: "seventa-header.jpg"}) {
                 childImageSharp {
-                    fluid(quality: 100) {
-                        aspectRatio
-                        base64
-                        originalImg
-                        originalName
-                        presentationHeight
-                        presentationWidth
-                        sizes
-                        src
-                        srcSet
-                        srcSetWebp
-                        srcWebp
-                        tracedSVG
+                    fluid(maxWidth: 1800, quality: 80) {
+                      ...GatsbyImageSharpFluid
                     }
                 }
                 name
@@ -43,7 +31,6 @@ export default () => {
             <span>We love experiences.</span>
             <span>We create them.</span>
           </h1>
-           {/* <Video /> */}
           {
             bannerImage.errors
               ? null
