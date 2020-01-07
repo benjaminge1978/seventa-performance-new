@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Seventa Events | Brand activation. Conferences. Event production. Event management. Venue sourcing" />
-             {/* <AnimatedLogo /> */}
+              <AnimatedLogo /> 
             <Banner />
             <Promo />
             <ContainerLabelled className="cases-updated-section" label={<span className="section-label">Cases </span>}>

@@ -19,7 +19,7 @@ export default ({ data }) => {
             <SEO title="Contact"/>
             <PageHeading
                 pageName="Contact us"
-                pageTitle="We'd love to hear from you."
+                pageTitle="We would love to hear from you."
                 description="Get in touch with the team to discuss how we can help with your project."
                 className="contact-page-heading"
             />
