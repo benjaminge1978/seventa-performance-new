@@ -7,7 +7,7 @@ export default () => {
         {
             file(relativePath: {eq: "services/event-management.jpg"}) {
                 childImageSharp {
-                    fluid(quality: 85) {
+                    fluid(quality: 100) {
                         srcSet
                         srcSetWebp
                         srcWebp

@@ -7,7 +7,7 @@ export default () => {
         query Image2 {
             file(relativePath: {eq: "simon-seventa-paint-fight.jpeg"}) {
                 childImageSharp {
-                    fluid(webpQuality: 80, jpegQuality: 80, fit: CONTAIN, maxWidth: 800) {
+                    fluid(webpQuality: 100, jpegQuality: 100, fit: CONTAIN, maxWidth: 1000) {
                         aspectRatio
                         base64
                         originalImg

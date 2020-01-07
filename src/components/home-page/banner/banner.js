@@ -13,7 +13,7 @@ export default () => {
         query BannerImage {
             file(relativePath: {eq: "seventa-header.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 1800, quality: 80) {
+                    fluid(maxWidth: 1800, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                 }

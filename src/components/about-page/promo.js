@@ -7,7 +7,7 @@ export default () => {
         query PromoImage {
             file(relativePath: {eq: "seventa-about-us-header-image.jpg"}) {
                 childImageSharp {
-                    fluid(quality: 85) {
+                    fluid(quality: 100) {
                         aspectRatio
                         base64
                         originalImg

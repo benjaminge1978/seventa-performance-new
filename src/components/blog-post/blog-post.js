@@ -67,7 +67,7 @@ export const query = graphql`
             }
             createdAt(formatString: "DD.MM.YYYY")
             thumbnail {
-                fluid(quality: 75, maxHeight: 800) {
+                fluid(quality: 100, maxHeight: 1000) {
                     base64
                     sizes
                     src

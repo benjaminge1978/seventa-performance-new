@@ -164,7 +164,7 @@ export const query = graphql`
         contentfulCases(id: {eq: $id}) {
             title
             thumbnail {
-                fluid(maxWidth: 1600, quality: 80) {
+                fluid(maxWidth: 2000, quality: 100) {
                     srcSet
                     src
                     srcSetWebp
@@ -183,7 +183,7 @@ export const query = graphql`
                 services
             }
             imagesRow {
-                fluid(quality: 80, maxWidth: 600) {
+                fluid(quality: 100, maxWidth: 1000) {
                     base64
                     sizes
                     src
@@ -209,7 +209,7 @@ export const query = graphql`
                 }
             }
             section3Image {
-                fluid(maxWidth: 680,quality: 80) {
+                fluid(maxWidth: 1000,quality: 100) {
                     base64
                     sizes
                     src
@@ -220,7 +220,7 @@ export const query = graphql`
                 title
             }
             bigImage {
-                fluid(maxWidth: 1300, quality: 80) {
+                fluid(maxWidth: 1800, quality: 100) {
                     base64
                     sizes
                     src

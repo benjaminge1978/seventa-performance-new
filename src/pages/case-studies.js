@@ -60,7 +60,7 @@ export const query = graphql`
                 slug
                 image {
                     title
-                    fluid(quality: 50, maxWidth: 700) {
+                    fluid(quality: 100, maxWidth: 1200) {
                       ...GatsbyContentfulFluid_withWebp_noBase64
                     }
                 }

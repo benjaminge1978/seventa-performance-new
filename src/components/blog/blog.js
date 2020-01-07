@@ -62,7 +62,7 @@ export const query = graphql`
                 createdAt(formatString: "DD.MM.YYYY")
                 thumbnail {
                     title
-                    fluid(maxWidth: 600, quality: 50) {
+                    fluid(maxWidth: 1000, quality: 100) {
                       ...GatsbyContentfulFluid_withWebp_noBase64
                     }
                 }
