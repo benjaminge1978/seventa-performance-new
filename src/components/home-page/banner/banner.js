@@ -43,7 +43,7 @@ export default () => {
             <span>We love experiences.</span>
             <span>We create them.</span>
           </h1>
-          <Video />
+           {/* <Video /> */}
           {
             bannerImage.errors
               ? null
