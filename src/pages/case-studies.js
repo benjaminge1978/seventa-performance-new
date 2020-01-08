@@ -1,5 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PageHeading from "../components/page-heading/page-heading";
@@ -21,11 +23,11 @@ export default ({data}) => {
                 description="At Seventa we take pride in knowing our customers. Completely leverage existing real-time information. Dramatically orchestrate web-enabled mosql."
             >
                 <ul className="case-studies-heading-links">
-                    <li><Link to="/brand-activation">Brand activation</Link></li>
-                    <li><Link to="/conferences">Conferences</Link></li>
-                    <li><Link to="/event-production">Event production</Link></li>
-                    <li><Link to="/event-management">Event management</Link></li>
-                    <li><Link to="/venue-sourcing">Venue sourcing</Link></li>
+                    <li><AniLink cover to="/brand-activation" direction="up" bg="#FFFFFF">Brand activation</AniLink></li>
+                    <li><AniLink cover to="/conferences" direction="up" bg="#FFFFFF">Conferences</AniLink></li>
+                    <li><AniLink cover to="/event-production"direction="up" bg="#FFFFFF">Event production</AniLink></li>
+                    <li><AniLink cover to="/event-management"direction="up" bg="#FFFFFF">Event management</AniLink></li>
+                    <li><AniLink cover to="/venue-sourcing"direction="up" bg="#FFFFFF">Venue sourcing</AniLink></li>
                 </ul>
             </PageHeading>
             {

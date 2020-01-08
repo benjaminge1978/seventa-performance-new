@@ -1,6 +1,7 @@
 import React from "react";
 import PropsTypes from "prop-types";
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,9 +33,9 @@ const Pagination = ({maxPages, current}) => {
             {
                 current === 1
                     ? null
-                    :   <Link className="pagination__arrow" to={current > 2 ? `/blog/${current - 1}` : `blog`} aria-label="Previous page">
+                    :   <AniLink className="pagination__arrow" cover to={current > 2 ? `/blog/${current - 1}` : `blog`} direction="up" aria-label="Previous page">
                             <FontAwesomeIcon icon={faChevronLeft} />
-                        </Link>
+                        </AniLink>
             }
 
             <ul className="pagination__list">
@@ -43,13 +44,13 @@ const Pagination = ({maxPages, current}) => {
                         <li key={index}>
                             {
                                 'number' === typeof linkText
-                                ?   <Link
-                                        to={1 === linkText ? `/blog` : `/blog/${linkText}`}
+                                ?   <AniLink
+                                       cover to={1 === linkText ? `/blog` : `/blog/${linkText}`}
                                         className={'pagination__link' + (linkText === current ? ' pagination__link--current' : '')}
                                         aria-label={`Pagination page ${linkText}`}
                                     >
                                         {linkText}
-                                    </Link>
+                                    </AniLink>
                                 :    <span>{linkText}</span>
                             }
                         </li>
@@ -60,9 +61,9 @@ const Pagination = ({maxPages, current}) => {
             {
                 current === maxPages
                     ? null
-                    :   <Link className="pagination__arrow" to={`/blog/${current + 1}`} aria-label="Next page">
+                    :   <AniLink className="pagination__arrow" to={`/blog/${current + 1}`} aria-label="Next page">
                             <FontAwesomeIcon icon={faChevronRight} />
-                        </Link>
+                        </AniLink>
             }
 
         </div>

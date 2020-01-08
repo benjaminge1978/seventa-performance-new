@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const LinkItem = ({ external, href, children, ...props }) => {
     const itemCLass = `menu-link ${(props.className ? ` ${props.className}` : '')}`;
@@ -8,7 +9,7 @@ const LinkItem = ({ external, href, children, ...props }) => {
     return (
         true === external
         ? <a className={`${itemCLass} external`} href={href}>{children}</a>
-        : <Link activeClassName={props.activeClassName} className={itemCLass} to={'/' + href}>{children}</Link>
+        : <AniLink activeClassName={props.activeClassName} className={itemCLass} cover to={'/' + href} direction="up" bg="#FFF">{children}</AniLink>
     )
 };
 

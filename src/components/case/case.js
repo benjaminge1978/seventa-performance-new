@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Img from "gatsby-image";
 import PropsTypes from "prop-types";
 import Arrow from "../../images/case-study-arrow.svg";
@@ -14,19 +15,19 @@ export default class Case extends React.Component {
 
         return (
             <div className={`cases-item cases-item--${itemClasses} cases-item--${index + 1}`} ref={this.triggerElement}>
-                        <Link to={caseSlug} className="cases-item__thumb">
+                        <AniLink to={caseSlug} className="cases-item__thumb">
                             <Img fluid={fluidImg.fluid} alt={fluidImg.title} loading="lazy" className="animated-img"/>
                             {
                                 thumbDesc
                                     ? <span className="cases-item__description">{thumbDesc}</span>
                                     : null
                             }
-                        </Link>
+                        </AniLink>
                         <div className="cases-item__heading">
                             <span className="case-heading-arrow"><Arrow /></span>
                             <div className="case-heading-text">
                                 <p>{category}</p>
-                                <h3><Link className="animated-link" to={caseSlug}>{title}</Link></h3>
+                                <h3><AniLink className="animated-link" cover to={caseSlug} direction="up" bg="#FFFFFF">{title}</AniLink></h3>
                             </div>
                         </div>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Layout from "../layout";
 import SEO from "../seo";
 import SeeMore from "./see-more/see-more";
@@ -39,7 +39,7 @@ const CasePage = ({data}) => {
                 </PageHeading>
                 {
                     'undefined' !== typeof thumbnail.fluid
-                        ?   <ContainerLabelled label={<Link to={category.slug}><Arrow /></Link>} className="case-page-thumbnail">
+                        ?   <ContainerLabelled label={<AniLink cover to={category.slug} direction="up" bg="#FFF"><Arrow /></AniLink>} className="case-page-thumbnail">
                             <Img fluid={thumbnail.fluid} alt={thumbnail.title} loading="lazy" className="animated-img" />
                         </ContainerLabelled>
                     : null

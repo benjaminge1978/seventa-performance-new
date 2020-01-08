@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../layout";
 import SEO from "../seo";
 import PageHeading from "../page-heading/page-heading";
@@ -27,7 +28,7 @@ export default ({data, pageContext}) => {
                 <p>{excerpt}</p>
             </PageHeading>
             <ContainerLabelled
-                label={<Link to="/blog"><ArrowLeft /></Link>}
+                label={<AniLink cover to="/blog" direction="up" bg="#ffffff"><ArrowLeft /></AniLink>}
                 className="blog-post-single__thumbnail"
                 innerClassName="blog-post-img-wrapper"
             >

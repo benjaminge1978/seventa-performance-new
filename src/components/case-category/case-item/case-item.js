@@ -3,19 +3,21 @@ import PropsTypes from "prop-types"
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import Arrow from "../../../images/case-study-arrow.svg";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 
 import './case-item.scss'
 
 const CaseItem = ({ slug, categories, caseTitle, thumbnail }) => (
     <div className="case-category__item">
-        <Link to={`/${slug}`}>
+        <AniLink cover to={`/${slug}`} direction="up" bg="#FFFFFF">
             <Img
                 fluid={thumbnail.fluid}
                 alt={thumbnail.title}
                 loading="lazy"
                 className="animated-img"
             />
-        </Link>
+        </AniLink>
         <div className="case-category-item-desc">
             <Arrow />
             <div className="case-category-item-heading">
@@ -30,7 +32,7 @@ const CaseItem = ({ slug, categories, caseTitle, thumbnail }) => (
                         </p>
                         : null
                 }
-                <h2><Link className="animated-link" to={`/${slug}`}>{caseTitle}</Link></h2>
+                <h2><AniLink className="animated-link" cover to={`/${slug}`} direction="up" bg="#FFFFFF">{caseTitle}</AniLink></h2>
             </div>
         </div>
     </div>

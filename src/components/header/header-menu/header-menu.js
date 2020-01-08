@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { TimelineLite, Power3, Back } from "gsap/all";
 import Menu from '../../menu/menu'
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 
 import "./header-menu.scss";
 
@@ -65,7 +67,7 @@ export default class extends React.Component {
     outputMenuLinks(links) {
         return links.map((link, index) => (
             <li className="anim" key={index} ref={li => this.animatedTextNodes.push(li)}>
-                <Link to={`/${link.href}`}>{link.text}</Link>
+                <AniLink to={`/${link.href}`} direction="up" bg="FFF">{link.text}</AniLink>
             </li>
         ))
     }

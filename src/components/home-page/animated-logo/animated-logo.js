@@ -29,29 +29,29 @@ export default class extends React.Component {
     }
 
     componentDidMount() {
-        this._timelineMax.staggerFrom(
-                this._animatedLogoItems,
-                1.3,
-                {
-                    delay: 0.1,
-                    y: "20px",
-                    autoAlpha: 0,
-                    ease:Power3.easeOut
-                },
-                0.07
-            );
+        this._timelineMax//.staggerFrom(
+        //         this._animatedLogoItems,
+        //         1.3,
+        //         {
+        //             delay: 0.1,
+        //             y: "20px",
+        //             autoAlpha: 0,
+        //             ease:Power3.easeOut
+        //         },
+        //         0.07
+        //     );
 
-        this._timelineMax.staggerTo(
-                this._animatedLogoItems,
-                0.5,
-                {
-                    y: "-40px",
-                    autoAlpha: 0,
-                    ease: Power3.easeOut
-                },
-                0.03,
-                "-=0.2"
-            )
+        // this._timelineMax.staggerTo(
+        //         this._animatedLogoItems,
+        //         0.5,
+        //         {
+        //             y: "-40px",
+        //             autoAlpha: 0,
+        //             ease: Power3.easeOut
+        //         },
+        //         0.03,
+        //         "-=0.2"
+        //     )
             .to(
                 ".mask-block",
                 {

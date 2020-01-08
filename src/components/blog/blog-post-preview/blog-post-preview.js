@@ -3,23 +3,25 @@ import PropsTypes from "prop-types";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import Arrow from "../../../images/arrow-right.svg";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 
 const BlogPostPreview = ({ title, excerpt, thumb, date, slug }) => {
     return (
         <div className="blog-post-preview">
-            <Link to={`/blog/${slug}`} className="blog-post-preview__thumb">
+            <AniLink cover to={`/blog/${slug}`} direction="up" bg="#FFFFFF" className="blog-post-preview__thumb">
                 <Img
                     fluid={thumb.fluid}
                     alt={thumb.title}
                     loading="lazy"
                     className="animated-img"
                 />
-            </Link>
+            </AniLink>
             <p className="blog-post-preview__date">{date}</p>
             <h2 className="blog-post-preview__title">
-                <Link to={`/blog/${slug}`} className="animated-link">
+                <AniLink to={`/blog/${slug}`} className="animated-link">
                     {title}
-                </Link>
+                </AniLink>
             </h2>
             <p className="blog-post-preview__excerpt">{excerpt}</p>
             <Arrow />

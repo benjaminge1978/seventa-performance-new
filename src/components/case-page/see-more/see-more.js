@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types"
 import Arrow from "../../../images/arrow-left.svg";
 import CaseItem from "../../case-category/case-item/case-item";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 
 import "./see-more.scss"
 
@@ -10,7 +12,7 @@ const SeeMore = ({cases, category}) => {
     return (
         <div className="related-cases">
             <div className="related-cases__heading">
-                <Link to={`/${category.slug}`}><Arrow />Back to {category.name.toLowerCase()} case studies</Link>
+                <AniLink cover to={`/${category.slug}`} direction="up" bg="#FFFFFF"><Arrow />Back to {category.name.toLowerCase()} case studies</AniLink>
                 <h3>See more {category.name}</h3>
             </div>
             <div className="related-cases__list">
