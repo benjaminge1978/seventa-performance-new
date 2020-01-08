@@ -6,6 +6,15 @@ module.exports = {
     contactEmail: `info@seventa.co.uk`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#666666`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
